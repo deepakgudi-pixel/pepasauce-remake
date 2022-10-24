@@ -1,0 +1,12 @@
+.line {
+    width: 101%;
+    height: 0.25vw;
+    background-color: $cream-color;
+    &.top {
+      margin-top: 0.5vw;
+    }
+    &.bottom {
+      margin-bottom: 0.5vw;
+    }
+  }
+  

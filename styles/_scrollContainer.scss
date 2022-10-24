@@ -1,0 +1,5 @@
+.scroll-container {
+    @include flex-center-row();
+    column-gap: 2vw;
+    white-space: nowrap;
+  }

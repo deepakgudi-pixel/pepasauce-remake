@@ -1,0 +1,199 @@
+.ultra-title {
+  padding-bottom: 10vw;
+  font-size: 40vw;
+  line-height: 24vw;
+}
+.mega-title {
+  font-size: 17vw;
+  line-height: 14vw;
+  letter-spacing: -0.5vw;
+  white-space: nowrap;
+}
+.title-large {
+  font-size: 4.5vw;
+  line-height: 3.3vw;
+}
+.title {
+  font-size: 3.5vw;
+  line-height: 3.5vw;
+}
+
+.text-block {
+  padding-bottom: 0.5vw;
+  font-size: 3.5vw;
+}
+.text-block-2 {
+  padding-bottom: 0.5vw;
+  font-size: 2vw;
+  line-height: 2vw;
+  font-family: "Vulf Sans", sans-serif;
+}
+.text-block-3 {
+  font-size: 4vw;
+  line-height: 4vw;
+  font-family: "Vulf Sans", sans-serif;
+  align-self: flex-start;
+  text-align: right;
+}
+.text-large {
+  font-size: 2.5vw;
+  line-height: 2.5vw;
+  font-family: "Vulf Sans", sans-serif;
+}
+.text-wide {
+  margin: 2vw 0;
+  width: 60vw;
+  font-size: 2.5vw;
+  line-height: 3vw;
+  font-family: "Vulf Sans", sans-serif;
+}
+.text,
+.link {
+  font-size: 2.5vw;
+  line-height: 3vw;
+  font-family: "Vulf Sans", sans-serif;
+}
+
+/* Images */
+.star {
+  width: 2.5vw;
+  height: auto;
+  @include transform-animation();
+}
+.star-2,
+.flame {
+  width: 9vw;
+  height: auto;
+}
+.star-3 {
+  width: 2.5vw;
+  height: auto;
+  @include transform-animation();
+}
+.fire {
+  width: 18.5vw;
+  height: auto;
+}
+.egg {
+  width: 12vw;
+  height: auto;
+  transform: translateY(-0.5vw) rotateZ(-4.5deg);
+  transform-style: preserve-3d;
+}
+.chicken {
+  width: 13vw;
+  height: auto;
+  transform: translateY(2vw);
+}
+.bull {
+  width: 23vw;
+  height: auto;
+  transform: translateY(2vw);
+}
+.handmill {
+  margin-top: -2vw;
+  width: 18vw;
+  height: auto;
+}
+.snake {
+  width: 16vw;
+  height: auto;
+}
+.mint {
+  width: 18vw;
+  height: auto;
+  transform: translateY(3vw);
+}
+.raspberry {
+  width: 16vw;
+  height: auto;
+  transform: translateY(4vw);
+}
+.cereal {
+  width: 25vw;
+  height: auto;
+  transform: translateY(3vw);
+}
+.bottle {
+  margin-top: 1vw;
+  height: 98vh;
+  width: auto;
+}
+
+/* -------------------- LARGE STRIPS -------------------- */
+.large-strip {
+  @include flex-center-col();
+  row-gap: 2vw;
+  .strip .scroll-container {
+    align-items: flex-end;
+    column-gap: 1vw;
+    img {
+      padding-left: 0.25vw;
+    }
+    .text-block-2 {
+      padding: 0;
+      text-align: right;
+    }
+  }
+  &.large-strip-1 {
+    margin-bottom: 2vw;
+  }
+  &.large-strip-3 {
+    margin-top: -3vw;
+    margin-bottom: 3vw;
+  }
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+  padding: 3vw 0;
+  width: 97vw;
+  @include flex-center-col();
+  row-gap: 1vw;
+  border-radius: 5vw;
+  border: 0.25vw solid $cream-color;
+  .logo {
+    width: 90vw;
+    height: auto;
+  }
+  .links {
+    @include flex-center-row();
+    column-gap: 2vw;
+  }
+}
+
+/* -------------------- BOTTLE CONTAINER (LG) : ANIMATED -------------------- */
+.bottle-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include flex-center-row();
+  z-index: 10;
+}
+
+/* -------------------- CLICK ME CURSOR (MD+SM) : ANIMATED -------------------- */
+.click-me {
+  width: 10vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  @include flex-center-col();
+  background: $dark-bg-color;
+
+  border: 0.25vw solid $cream-color;
+  border-radius: 50%;
+  z-index: 12;
+  overflow: hidden;
+  transition: transform 0.23s;
+
+  .content {
+    @include flex-center-row();
+    .text-block {
+      font-size: 2vw;
+      line-height: 2vw;
+      white-space: nowrap;
+    }
+  }
+}
